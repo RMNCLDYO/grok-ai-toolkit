@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://x.ai/" title="Go to xAI homepage">
-        <img src="" alt="xAI">
+        <img src="https://img.shields.io/badge/Grok%20by%20xAI-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjAgQnVpbGQgMTg2KSAgLS0+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xIiBmb2N1c2FibGU9ImZhbHNlIj4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xLjYsOC42bDEwLjQsMTQuOWg0LjZMNi4zLDguNkgxLjZaTTYuMywxNi45bC00LjYsNi42aDQuNmwyLjMtMy4zLTIuMy0zLjNaTTE3LjcuNWwtOCwxMS40LDIuMywzLjNMMjIuNC41aC00LjZaTTE4LjYsNy42djE1LjloMy44VjIuMmwtMy44LDUuNFoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="xAI">
     </a>
 </p>
 
