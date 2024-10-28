@@ -1,24 +1,24 @@
 import sys
 import argparse
-from xai import Chat, Text, Vision
+from grok import Chat, Text, Vision
 
 def main():
     parser = argparse.ArgumentParser(
         description="""
     ------------------------------------------------------------------
-                              xAI Toolkit                             
+                             Grok AI Toolkit                             
                    API Wrapper & Command-line Interface               
                           [v1.0.0] by @rmncldyo                       
     ------------------------------------------------------------------
 
-    xAI toolkit is an API wrapper and command-line interface for xAI's Grok models.
+    Grok AI toolkit is an API wrapper and command-line interface for xAI's Grok language models.
 
     Modes:
     - Chat: Interactive conversation with the model
     - Text: Single prompt-response interaction
     - Vision: Image analysis and multimodal interaction
 
-    For detailed usage information, visit: github.com/rmncldyo/xAI-toolkit
+    For detailed usage information, visit: github.com/rmncldyo/grok-ai-toolkit
     """,
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
@@ -28,7 +28,7 @@ def main():
     mode_group.add_argument('-t', '--text', action='store_true', help='Generate a single text response')
     mode_group.add_argument('-v', '--vision', action='store_true', help='Enable vision mode for image analysis')
 
-    parser.add_argument('-ak', '--api_key', type=str, help='Your xAI API key')
+    parser.add_argument('-ak', '--api_key', type=str, help='Your Grok API key')
     parser.add_argument('-m', '--model', type=str, help='Specify which model to use')
     parser.add_argument('-p', '--prompt', type=str, help='The text prompt to send')
     parser.add_argument('-sp', '--system_prompt', type=str, help='Set system-level instructions')

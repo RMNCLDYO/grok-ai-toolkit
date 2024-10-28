@@ -3,13 +3,13 @@ import sys
 import shutil
 import base64
 import mimetypes
-from urllib.parse import urlparse, unquote
+from urllib.parse import urlparse
 
 class FileHandler:
     def __init__(self, api_key, directory_path):
         self.api_key = api_key
         self.directory_path = directory_path
-        self.cache_folder_path = os.path.join(directory_path, 'xai_toolkit_cache')
+        self.cache_folder_path = os.path.join(directory_path, 'grok_ai_toolkit_cache')
         os.makedirs(self.cache_folder_path, exist_ok=True)
 
     def handle_upload_command(self, user_input):

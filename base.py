@@ -4,7 +4,7 @@ from client import Client
 from validators import InputValidator
 from file_handler import FileHandler
 
-class xAIBase:
+class GrokBase:
     def __init__(self):
         self.client = None
         self.model = None

@@ -5,19 +5,19 @@ from dotenv import load_dotenv
 def load_config(api_key=None):
     try:
         if not api_key:
-            api_key = load_required_env_variables('XAI_API_KEY')
+            api_key = load_required_env_variables('GROK_API_KEY')
         
         if not api_key:
             print("[ ERROR ]: Failed to load API key. Please ensure it's set in your environment variables or .env file.")
-            print("You can set it by running: export XAI_API_KEY=your_api_key_here")
+            print("You can set it by running: export GROK_API_KEY=your_api_key_here")
             sys.exit(1)
 
         config = {
             'api_key': api_key,
-            'base_model': os.getenv('XAI_BASE_MODEL', 'grok-beta'),
-            'vision_model': os.getenv('XAI_VISION_MODEL', 'grok-2v-mini'),
-            'base_url': os.getenv('XAI_BASE_URL', 'https://api.x.ai'),
-            'api_version': os.getenv('XAI_API_VERSION', 'v1')
+            'base_model': os.getenv('GROK_BASE_MODEL', 'grok-beta'),
+            'vision_model': os.getenv('GROK_VISION_MODEL', 'grok-2v-mini'),
+            'base_url': os.getenv('GROK_BASE_URL', 'https://api.x.ai'),
+            'api_version': os.getenv('GROK_API_VERSION', 'v1')
         }
 
         if not validate_config(config):

@@ -1,12 +1,12 @@
 <p align="center">
     <a href="https://x.ai/" title="Go to xAI homepage">
-        <img src="https://img.shields.io/badge/Grok%20by%20xAI-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjAgQnVpbGQgMTg2KSAgLS0+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xIiBmb2N1c2FibGU9ImZhbHNlIj4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xLjYsOC42bDEwLjQsMTQuOWg0LjZMNi4zLDguNkgxLjZaTTYuMywxNi45bC00LjYsNi42aDQuNmwyLjMtMy4zLTIuMy0zLjNaTTE3LjcuNWwtOCwxMS40LDIuMywzLjNMMjIuNC41aC00LjZaTTE4LjYsNy42djE1LjloMy44VjIuMmwtMy44LDUuNFoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="xAI">
+        <img src="https://img.shields.io/badge/Grok%20by%20xAI-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMjkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjAgQnVpbGQgMTg2KSAgLS0+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGlkPSJMYXllcl8xIiBmb2N1c2FibGU9ImZhbHNlIj4KICAgIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xLjYsOC42bDEwLjQsMTQuOWg0LjZMNi4zLDguNkgxLjZaTTYuMywxNi45bC00LjYsNi42aDQuNmwyLjMtMy4zLTIuMy0zLjNaTTE3LjcuNWwtOCwxMS40LDIuMywzLjNMMjIuNC41aC00LjZaTTE4LjYsNy42djE1LjloMy44VjIuMmwtMy44LDUuNFoiLz4KICA8L2c+Cjwvc3ZnPg==" alt="Grok by xAI">
     </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/RMNCLDYO/xAI-toolkit" title="Go to repo">
-        <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=xAI+Toolkit&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2FxAI-toolkit%2Fmain%2F.github%2Fversion.json" alt="xAI Toolkit">
+    <a href="https://github.com/RMNCLDYO/grok-ai-toolkit" title="Go to repo">
+        <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Grok+AI+Toolkit&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRMNCLDYO%2Fgrok-ai-toolkit%2Fmain%2F.github%2Fversion.json" alt="Grok AI Toolkit">
     </a>
 </p>
 
@@ -18,18 +18,18 @@
 <p align="center">
     <a href="/">
         <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RMNCLDYO/xAI-toolkit/main/.github/xAI-logo-dark.png">
-          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RMNCLDYO/xAI-toolkit/main/.github/xAI-logo-light.png">
-          <img alt="xAI" width="250" src="https://raw.githubusercontent.com/RMNCLDYO/xAI-toolkit/main/.github/xAI-logo-dark.png">
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RMNCLDYO/grok-ai-toolkit/main/.github/xAI-logo-dark.png">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RMNCLDYO/grok-ai-toolkit/main/.github/xAI-logo-light.png">
+          <img alt="xAI" width="250" src="https://raw.githubusercontent.com/RMNCLDYO/grok-ai-toolkit/main/.github/xAI-logo-dark.png">
         </picture>
     </a>
 </p>
 
-A powerful Python-based API wrapper and command-line interface for interacting with xAI's language models. This toolkit provides seamless integration with xAI's models for chat, text completion, and vision analysis capabilities.
+A powerful Python-based API wrapper and command-line interface for interacting with xAI's Grok language models. This toolkit provides seamless integration with xAI's Grok language models for chat, text completion, and vision analysis capabilities.
 
 ## 🚀 Features
 
-- 🤖 Interactive chat sessions with xAI models
+- 🤖 Interactive chat sessions with Grok by xAI language models
 - 📝 Single-shot text completion
 - 👁️ Vision analysis with support for local images and URLs
 - ⚡ Real-time streaming responses
@@ -61,12 +61,12 @@ A powerful Python-based API wrapper and command-line interface for interacting w
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/RMNCLDYO/xAI-toolkit.git
+   git clone https://github.com/RMNCLDYO/grok-ai-toolkit.git
    ```
 
 2. Navigate to the repository folder:
    ```bash
-   cd xai-toolkit
+   cd grok-ai-toolkit
    ```
 
 3. Install the required dependencies:
@@ -84,7 +84,7 @@ A powerful Python-based API wrapper and command-line interface for interacting w
        - Navigate to your terminal.
        - Add your API key like so:
          ```shell
-         export XAI_API_KEY=your_api_key
+         export GROK_API_KEY=your_api_key
          ```
        This method allows the API key to be loaded automatically when using the wrapper or CLI.
      
@@ -93,7 +93,7 @@ A powerful Python-based API wrapper and command-line interface for interacting w
        - Create a .env file in the project's root directory.
        - Add your API key to the .env file like so:
          ```makefile
-         XAI_API_KEY=your_api_key
+         GROK_API_KEY=your_api_key
          ```
        This method allows the API key to be loaded automatically when using the wrapper or CLI.
      
@@ -123,7 +123,7 @@ python cli.py --text --prompt "Write a story about AI."
 
 ***Wrapper***
 ```python
-from xai import Text
+from grok import Text
 
 Text().run(prompt="Write a story about AI.")
 ```
@@ -138,7 +138,7 @@ python cli.py --chat
 
 ***Wrapper***
 ```python
-from xai import Chat
+from grok import Chat
 
 Chat().run()
 ```
@@ -153,7 +153,7 @@ python cli.py --vision --prompt "What's in this image?" --image_path image.jpg
 
 ***Wrapper***
 ```python
-from xai import Vision
+from grok import Vision
 
 Vision().run(prompt="What's in this image?", image_path="image.jpg")
 ```
@@ -205,7 +205,7 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 🔒 Error Handling and Safety
 
-The xAI Toolkit includes robust error handling to help you diagnose and resolve issues quickly. Here are some common error codes and their solutions:
+The Grok AI Toolkit includes robust error handling to help you diagnose and resolve issues quickly. Here are some common error codes and their solutions:
 
 | HTTP Code | Status | Description | Solution |
 |-----------|--------|-------------|----------|
@@ -219,7 +219,7 @@ The xAI Toolkit includes robust error handling to help you diagnose and resolve 
 
 ## 📁 Supported File Types
 
-The xAI Toolkit supports the following image formats for vision processing:
+The Grok AI Toolkit supports the following image formats for vision processing:
 
 | Category | File Extensions |
 |----------|----------------|
@@ -230,9 +230,9 @@ The xAI Toolkit supports the following image formats for vision processing:
 
 ## 💾 Caching and Cleanup
 
-The xAI Toolkit implements a caching mechanism for uploaded images to improve performance and reduce unnecessary network requests:
+The Grok AI Toolkit implements a caching mechanism for uploaded images to improve performance and reduce unnecessary network requests:
 
-1. When an image is uploaded from a URL, it's stored in a temporary cache folder (`.xAI_toolkit_cache`).
+1. When an image is uploaded from a URL, it's stored in a temporary cache folder (`.grok_ai_toolkit_cache`).
 2. The cache is automatically cleaned up at the end of each session.
 3. Cached files are managed efficiently to prevent storage bloat.
 
@@ -248,7 +248,7 @@ Encountered a bug? We'd love to hear about it. Please follow these steps to repo
 
 1. Check if the issue has already been reported.
 2. Use the [Bug Report](.github/ISSUE_TEMPLATE/bug_report.md) template to create a detailed report.
-3. Submit the report [here](https://github.com/RMNCLDYO/xAI-toolkit/issues).
+3. Submit the report [here](https://github.com/RMNCLDYO/grok-ai-toolkit/issues).
 
 Your report will help us make the project better for everyone.
 
@@ -257,7 +257,7 @@ Got an idea for a new feature? Feel free to suggest it. Here's how:
 
 1. Check if the feature has already been suggested or implemented.
 2. Use the [Feature Request](.github/ISSUE_TEMPLATE/feature_request.md) template to create a detailed request.
-3. Submit the request [here](https://github.com/RMNCLDYO/xAI-toolkit/issues).
+3. Submit the request [here](https://github.com/RMNCLDYO/grok-ai-toolkit/issues).
 
 Your suggestions for improvements are always welcome.
 
