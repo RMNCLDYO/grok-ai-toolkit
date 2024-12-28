@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import mimetypes
+from urllib.parse import urlparse
 
 class InputValidator:
     def __init__(self):
@@ -9,7 +10,7 @@ class InputValidator:
             'image/jpeg', 'image/jpg', 'image/png', 
             'image/gif', 'image/webp', 'image/bmp'
         }
-        self.max_file_size = 20 * 1024 * 1024  # 20MB
+        self.max_file_size = 10 * 1024 * 1024  # 10MiB (xAI limit)
         
     def validate_text_input(self, prompt):
         if not prompt or not isinstance(prompt, str):
@@ -78,6 +79,13 @@ class InputValidator:
                 sys.exit(1)
         return True
 
+    def validate_mime_type(self, file_path):
+        mime_type, _ = mimetypes.guess_type(file_path)
+        if not mime_type or mime_type not in self.supported_image_types:
+            print(f"[ ERROR ]: Unsupported image type: {mime_type}")
+            sys.exit(1)
+        return mime_type
+
     def validate_image(self, image_path):
         if not os.path.exists(image_path):
             print(f"[ ERROR ]: Image file not found: {image_path}")
@@ -91,19 +99,22 @@ class InputValidator:
             print(f"[ ERROR ]: Image file too large (max {self.max_file_size/(1024*1024)}MB)")
             sys.exit(1)
         
-        mime_type, _ = mimetypes.guess_type(image_path)
-        if not mime_type or mime_type not in self.supported_image_types:
-            print(f"[ ERROR ]: Unsupported image type: {mime_type}")
-            sys.exit(1)
-        
+        mime_type = self.validate_mime_type(image_path)
         return True
+
+    def is_valid_url(self, url):
+        try:
+            result = urlparse(url)
+            return all([result.scheme, result.netloc])
+        except:
+            sys.exit(1)
 
     def validate_image_url(self, url):
         if not url:
             print("[ ERROR ]: Image URL cannot be empty")
             sys.exit(1)
         
-        if not url.startswith(('http://', 'https://', 'data:image/')):
+        if not self.is_valid_url(url):
             print("[ ERROR ]: Invalid image URL format")
             sys.exit(1)
         
