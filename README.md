@@ -146,16 +146,34 @@ Chat().run()
 ### Vision Mode
 *For processing images alongside text, allowing for visual analysis and multimodal interactions. This mode enables you to upload images (from local paths or URLs) and chat with the AI about their content.*
 
+#### Local Image
+*For processing local images.*
+
 ***CLI***
 ```bash
-python cli.py --vision --prompt "What's in this image?" --image_path image.jpg
+python cli.py --vision --prompt "What's in this image?" --image_path "/path/to/image.jpg"
 ```
 
 ***Wrapper***
 ```python
 from grok import Vision
 
-Vision().run(prompt="What's in this image?", image_path="image.jpg")
+Vision().run(prompt="What's in this image?", image_path="/path/to/image.jpg")
+```
+
+#### URL Image
+*For processing images from URLs.*
+
+***CLI***
+```bash
+python cli.py --vision --prompt "What's in this image?" --image_url "https://example.com/image.jpg"
+```
+
+***Wrapper***
+```python
+from grok import Vision
+
+Vision().run(prompt="What's in this image?", image_url="https://example.com/image.jpg")
 ```
 
 ## 🔧 Special Commands
