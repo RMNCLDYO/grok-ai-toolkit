@@ -192,16 +192,22 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 📊 Supported Models
 
-| **Model** | **Inputs** |
-|---|---|
-| `grok-beta` | Text |
-| `grok-2v-mini` | Text, images |
+| Model | Input | Output | Context ( Max Tokens) |
+|-------|--------|---------|-----------------|
+| grok-2-vision-1212 | Image, Text | Text | 8192 |
+| grok-2-1212 | Text | Text | 131072 |
+| grok-vision-beta | Image, Text | Text | 8192 |
+| grok-beta | Text | Text | 131072 |
 
-> [!WARNING]
-> *The `grok-2v-mini` model is currently not available to most users.*
+*The `grok-2` and `grok-2-latest` model names are aliased to the latest chat models, currently `grok-2-1212`. You can use `grok-2` and `grok-2-latest` if you want to automatically access the latest model version, or choose a model with version number to keep a consistent output.*
 
 > [!NOTE]
-> *The availability of specific models may be subject to change. Always refer to xAI's official documentation for the most up-to-date information on model availability and capabilities.*
+> Note your model access might vary depending on various factors such as geographical location, account limitations, etc.
+
+For the most up-to-date information on your team's model access, visit the API Models page on your xAI [Console Models Page](https://console.x.ai/team/default/models).
+
+> [!WARNING]
+> Image processing supports JPEG, JPG, PNG, GIF, WebP, and BMP formats with a 10MiB size limit.
 
 ## 🔒 Error Handling and Safety
 
