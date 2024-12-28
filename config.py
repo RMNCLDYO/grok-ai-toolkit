@@ -14,8 +14,8 @@ def load_config(api_key=None):
 
         config = {
             'api_key': api_key,
-            'base_model': os.getenv('GROK_BASE_MODEL', 'grok-beta'),
-            'vision_model': os.getenv('GROK_VISION_MODEL', 'grok-2v-mini'),
+            'base_model': os.getenv('GROK_BASE_MODEL', 'grok-2-1212'),
+            'vision_model': os.getenv('GROK_VISION_MODEL', 'grok-2-vision-1212'),
             'base_url': os.getenv('GROK_BASE_URL', 'https://api.x.ai'),
             'api_version': os.getenv('GROK_API_VERSION', 'v1')
         }

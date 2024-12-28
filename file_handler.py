@@ -12,20 +12,20 @@ class FileHandler:
         self.cache_folder_path = os.path.join(directory_path, 'grok_ai_toolkit_cache')
         os.makedirs(self.cache_folder_path, exist_ok=True)
 
-    def handle_upload_command(self, user_input):
+    def handle_upload_command(self, user_input, detail="high"):
         new_files, new_prompt = self.parse_upload_command(user_input)
         if new_files:
-            processed_new_files = self.process_files(new_files)
+            processed_new_files = self.process_files(new_files, detail)
             return processed_new_files, new_prompt
         else:
             print("[ ERROR ]: No valid files were provided with the upload command.")
             print("[ ERROR ]: Please check your file paths and try again.")
             return None, None
 
-    def process_files(self, files):
+    def process_files(self, files, detail="high"):
         processed_files = []
         for file in files:
-            file_info = self.process_file(file)
+            file_info = self.process_file(file, detail)
             if file_info:
                 processed_files.append(file_info)
         
@@ -35,19 +35,24 @@ class FileHandler:
         
         return processed_files
 
-    def process_file(self, file_input):
+    def process_file(self, file_input, detail="high"):
         if self.is_valid_url(file_input):
-            return self.process_url_file(file_input)
+            return self.process_url_file(file_input, detail)
         elif os.path.isfile(file_input):
-            return self.process_local_file(file_input)
+            return self.process_local_file(file_input, detail)
         else:
             print(f"[ ERROR ]: Invalid file input: {file_input}")
             sys.exit(1)
 
-    def process_local_file(self, file_path):
+    def process_local_file(self, file_path, detail="high"):
         try:
             mime_type = self.get_mime_type(file_path)
             if not mime_type:
+                return None
+
+            file_size = os.path.getsize(file_path)
+            if file_size > 10 * 1024 * 1024:
+                print(f"[ ERROR ]: File size exceeds 10MiB limit: {file_path}")
                 return None
 
             with open(file_path, 'rb') as f:
@@ -56,19 +61,21 @@ class FileHandler:
                 return {
                     "type": "image_url",
                     "image_url": {
-                        "url": f"data:{mime_type};base64,{base64_data}"
+                        "url": f"data:{mime_type};base64,{base64_data}",
+                        "detail": detail
                     }
                 }
         except Exception as e:
             print(f"[ ERROR ]: Failed to process local file: {str(e)}")
             sys.exit(1)
 
-    def process_url_file(self, url):
+    def process_url_file(self, url, detail="high"):
         try:
             return {
                 "type": "image_url",
                 "image_url": {
-                    "url": url
+                    "url": url,
+                    "detail": detail
                 }
             }
         except Exception as e:

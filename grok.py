@@ -121,11 +121,14 @@ class Vision(GrokBase):
             
             if image_path or image_url:
                 files = [image_path] if image_path else [image_url]
-                processed_files = self.file_handler.process_files(files)
+                processed_files = self.file_handler.process_files(files, image_detail or "high")
                 if processed_files:
-                    self.conversation_history.append({"role": "user", "content": processed_files})
+                    message_content = []
+                    for file_info in processed_files:
+                        message_content.append(file_info)
                     if prompt:
-                        self.conversation_history[-1]["content"].append({"text": prompt})
+                        message_content.append({"type": "text", "text": prompt})
+                    self.conversation_history.append({"role": "user", "content": message_content})
             
             if not image_path and not image_url:
                 print("Assistant: Hello! I'm ready to analyze any images you'd like to share.")
@@ -153,7 +156,7 @@ class Vision(GrokBase):
 
                     user_input = input("User: ").strip()
                     
-                    command, processed_files, text = self.handle_user_input(user_input, mode)
+                    command, processed_files, text = self.handle_user_input(user_input, mode, image_detail)
                     
                     if command == "exit":
                         break
@@ -165,12 +168,14 @@ class Vision(GrokBase):
                         if not processed_files:
                             continue
                             
-                        user_message = {"role": "user", "content": processed_files}
+                        message_content = []
+                        for file_info in processed_files:
+                            message_content.append(file_info)
                         if text:
-                            user_message["content"].append({"text": text})
-                        self.conversation_history.append(user_message)
+                            message_content.append({"type": "text", "text": text})
+                        self.conversation_history.append({"role": "user", "content": message_content})
                     elif text:
-                        self.conversation_history.append({"role": "user", "content": text})
+                        self.conversation_history.append({"role": "user", "content": [{"type": "text", "text": text}]})
                     else:
                         print("[ ERROR ]: Invalid input detected. Please enter a valid message or use the /upload command.")
                         continue

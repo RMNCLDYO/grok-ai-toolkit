@@ -13,7 +13,7 @@ class GrokBase:
         self.file_handler = None
         self.conversation_history = []
 
-    def handle_user_input(self, user_input, mode):
+    def handle_user_input(self, user_input, mode, image_detail="high"):
         if user_input.lower() in ['exit', 'quit', '/exit', '/quit']:
             return "exit", None, None
 
@@ -22,7 +22,7 @@ class GrokBase:
 
         if mode == "vision" and user_input.startswith('/upload'):
             print()
-            processed_files, user_text = self.file_handler.handle_upload_command(user_input)
+            processed_files, user_text = self.file_handler.handle_upload_command(user_input, image_detail)
             return "upload", processed_files, user_text
 
         return None, None, user_input
