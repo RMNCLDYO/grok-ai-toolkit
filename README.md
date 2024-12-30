@@ -146,16 +146,34 @@ Chat().run()
 ### Vision Mode
 *For processing images alongside text, allowing for visual analysis and multimodal interactions. This mode enables you to upload images (from local paths or URLs) and chat with the AI about their content.*
 
+#### Local Image
+*For processing local images.*
+
 ***CLI***
 ```bash
-python cli.py --vision --prompt "What's in this image?" --image_path image.jpg
+python cli.py --vision --prompt "What's in this image?" --image_path "/path/to/image.jpg"
 ```
 
 ***Wrapper***
 ```python
 from grok import Vision
 
-Vision().run(prompt="What's in this image?", image_path="image.jpg")
+Vision().run(prompt="What's in this image?", image_path="/path/to/image.jpg")
+```
+
+#### URL Image
+*For processing images from URLs.*
+
+***CLI***
+```bash
+python cli.py --vision --prompt "What's in this image?" --image_url "https://example.com/image.jpg"
+```
+
+***Wrapper***
+```python
+from grok import Vision
+
+Vision().run(prompt="What's in this image?", image_url="https://example.com/image.jpg")
 ```
 
 ## 🔧 Special Commands
@@ -192,16 +210,17 @@ During interaction with the toolkit, you can use the following special commands:
 
 ## 📊 Supported Models
 
-| **Model** | **Inputs** |
-|---|---|
-| `grok-beta` | Text |
-| `grok-2v-mini` | Text, images |
+| Model | Input | Output | Context ( Max Tokens) |
+|-------|--------|---------|-----------------|
+| grok-2-vision-1212 | Image, Text | Text | 8192 |
+| grok-2-1212 | Text | Text | 131072 |
+| grok-vision-beta | Image, Text | Text | 8192 |
+| grok-beta | Text | Text | 131072 |
 
-> [!WARNING]
-> *The `grok-2v-mini` model is currently not available to most users.*
+*The `grok-2` and `grok-2-latest` model names are aliased to the latest chat models, currently `grok-2-1212`. You can use `grok-2` and `grok-2-latest` if you want to automatically access the latest model version, or choose a model with a specific version number to keep a consistent output.*
 
 > [!NOTE]
-> *The availability of specific models may be subject to change. Always refer to xAI's official documentation for the most up-to-date information on model availability and capabilities.*
+> Note your model access might vary depending on various factors such as geographical location, account limitations, etc. For the most up-to-date information on your team's model access, visit the API Models page on your xAI [Console Models Page](https://console.x.ai/team/default/models).
 
 ## 🔒 Error Handling and Safety
 
@@ -225,8 +244,8 @@ The Grok AI Toolkit supports the following image formats for vision processing:
 |----------|----------------|
 | **Images** | `jpg`, `jpeg`, `png`, `gif`, `webp`, `bmp` |
 
-> [!NOTE]
-> *Maximum file size limit is 20MB per image.*
+> [!WARNING]
+> xAI has a limit of 10MB for file uploads.
 
 ## 💾 Caching and Cleanup
 
