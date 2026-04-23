@@ -6,7 +6,6 @@
 
 <p align="center">
     <a href="https://github.com/ramonclaudio/grok-ai-toolkit" title="Go to repo">
-        <img src="https://img.shields.io/badge/dynamic/json?style=for-the-badge&label=Grok+AI+Toolkit&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2FRamon Claudio%2Fgrok-ai-toolkit%2Fmain%2F.github%2Fversion.json" alt="Grok AI Toolkit">
     </a>
 </p>
 
@@ -18,9 +17,9 @@
 <p align="center">
     <a href="/">
         <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ramonclaudio/grok-ai-toolkit/main/.github/xAI-logo-dark.png">
-          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ramonclaudio/grok-ai-toolkit/main/.github/xAI-logo-light.png">
-          <img alt="xAI" width="250" src="https://raw.githubusercontent.com/ramonclaudio/grok-ai-toolkit/main/.github/xAI-logo-dark.png">
+          <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ramonclaudio/grok-ai-toolkit/main/.github/assets/xAI-logo-dark.png">
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ramonclaudio/grok-ai-toolkit/main/.github/assets/xAI-logo-light.png">
+          <img alt="xAI" width="250" src="https://raw.githubusercontent.com/ramonclaudio/grok-ai-toolkit/main/.github/assets/xAI-logo-dark.png">
         </picture>
     </a>
 </p>
