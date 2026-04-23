@@ -8,7 +8,7 @@ def main():
     ------------------------------------------------------------------
                              Grok AI Toolkit                             
                    API Wrapper & Command-line Interface               
-                          [v1.1.0] by @rmncldyo                       
+                          [v1.1.0] by @ramonclaudio                       
     ------------------------------------------------------------------
 
     Grok AI toolkit is an API wrapper and command-line interface for xAI's Grok language models.
@@ -18,7 +18,7 @@ def main():
     - Text: Single prompt-response interaction
     - Vision: Image analysis and multimodal interaction
 
-    For detailed usage information, visit: github.com/rmncldyo/grok-ai-toolkit
+    For detailed usage information, visit: github.com/ramonclaudio/grok-ai-toolkit
     """,
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
